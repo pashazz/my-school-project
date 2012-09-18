@@ -10,11 +10,11 @@ var header: real;
     trapezoid: real;
     area:      real;
 begin
-  WriteLn('Введите основание равнобедренной трапеции №1');
+  WriteLn('Trapeze base #1:');
+  Read(base1);
+  WriteLn('Trapeze base #2:');
   Read(base2);
-  WriteLn('Введите основание равнобедренной трапеции №2');
-  Read(base2);
-  WriteLn('Введите высоту равнобедренной трапеции');
+  WriteLn('Trapeze header:');
   Read(header);
   (* Вычисляю длину боковой стороны, отсекая из большей стороны меньшую,
   деля на 2 и применяя т. Пифагора *)
@@ -23,7 +23,7 @@ begin
 
   perimeter := 2*trapezoid + base1 + base2;
   area := (base1 + base2)/2*header;
-  WriteLn ('Периметр трапеции: ', perimeter:4:4, '; площадь трапеции: ', area:4:4);
+  WriteLn ('P: ', perimeter:4:4, '; S: ', area:4:4);
 end.
 
 
