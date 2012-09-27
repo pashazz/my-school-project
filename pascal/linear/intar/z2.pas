@@ -4,11 +4,11 @@ var
 	day,wday: Integer;
 
 begin
-	clrscr;
 	writeln('Enter the day of year');
 	read(day);
-	wday := day div 7 - (day mod 7);
-	writeln ('the day of week is:', wday);
-
+	writeln('Enter the first week day of year');
+	read(wday);
+	day := (day+wday-2) mod 7 + 1;
+	writeln('The day of week is ', day);
 readkey;
 end.

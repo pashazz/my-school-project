@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''Вычисление счастливого билета'''
-import argparse,itertools
+import argparse
 
 def check_ticket(ticket):
 	'''Checks if abcxyz ticket - abc= xyz'''
@@ -21,10 +21,10 @@ def check_ticket(ticket):
 		ticket = ticket % c
 		c /= 10
 
-	first = digits[0] + digits[1] + digits[2]
-	second = digits[3] + digits[4] + digits[5]
-	#product?
-	print (first,second,first==second)
+	if sum (digits[:3]) == sum (digits[3:]):
+		print ('Билет является счастливым')
+	else:
+		print ('Билет не является счастливым')
 
 
 
